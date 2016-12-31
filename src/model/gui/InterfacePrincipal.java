@@ -48,15 +48,30 @@ public class InterfacePrincipal extends javax.swing.JFrame {
 
         menuItem2x2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, java.awt.event.InputEvent.CTRL_MASK));
         menuItem2x2.setText("Cubo 2x2x2");
+        menuItem2x2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItem2x2ActionPerformed(evt);
+            }
+        });
         menuCategoria.add(menuItem2x2);
 
         menuItem3x3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, java.awt.event.InputEvent.CTRL_MASK));
         menuItem3x3.setSelected(true);
         menuItem3x3.setText("Cubo 3x3x3");
+        menuItem3x3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItem3x3ActionPerformed(evt);
+            }
+        });
         menuCategoria.add(menuItem3x3);
 
         menuItem4x4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.CTRL_MASK));
         menuItem4x4.setText("Cubo 4x4x4");
+        menuItem4x4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                menuItem4x4ActionPerformed(evt);
+            }
+        });
         menuCategoria.add(menuItem4x4);
 
         barraMenu.add(menuCategoria);
@@ -100,6 +115,18 @@ public class InterfacePrincipal extends javax.swing.JFrame {
             lblScramble.setText("<html><p align='center'>" + new Embaralhamento4x4().getScramble() + "</p></html>");
         }
     }//GEN-LAST:event_btnScrambleActionPerformed
+
+    private void menuItem2x2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItem2x2ActionPerformed
+        lblScramble.setText(new Embaralhamento2x2().getScramble());
+    }//GEN-LAST:event_menuItem2x2ActionPerformed
+
+    private void menuItem3x3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItem3x3ActionPerformed
+        lblScramble.setText(new Embaralhamento3x3().getScramble());
+    }//GEN-LAST:event_menuItem3x3ActionPerformed
+
+    private void menuItem4x4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuItem4x4ActionPerformed
+        lblScramble.setText("<html><p align='center'>" + new Embaralhamento4x4().getScramble() + "</p></html>");
+    }//GEN-LAST:event_menuItem4x4ActionPerformed
 
     //MAIN
     public static void main(String args[]) {
